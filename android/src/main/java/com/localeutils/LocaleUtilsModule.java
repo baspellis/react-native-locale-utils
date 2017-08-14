@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
+import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -32,7 +33,15 @@ public class LocaleUtilsModule extends ReactContextBaseJavaModule {
 	}
 
 	private boolean usesMetricSystem() {
-		return false;
+		String countryCode = Locale.getDefault().getCountry().toUpperCase();
+    switch (countryCode) {
+        case "US":
+        case "LR":
+        case "MM":
+            return false;
+        default:
+            return true;
+    }
 	}
 
 	@Override

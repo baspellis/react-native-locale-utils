@@ -6,4 +6,7 @@ module.exports = {
   is24HourFormat: function () {
     return LocaleUtils.is24HourFormat;
   },
+  usesMetricSystem: function () {
+    return LocaleUtils.usesMetricSystem;
+  },
 }

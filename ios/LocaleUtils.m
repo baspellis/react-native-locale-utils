@@ -26,8 +26,16 @@ RCT_EXPORT_MODULE()
     return (amRange.location == NSNotFound && pmRange.location == NSNotFound);
 }
 
+- (BOOL)usesMetricSystem {
+    NSLocale *locale = [NSLocale currentLocale];
+    return [[locale objectForKey:NSLocaleUsesMetricSystem] boolValue];
+}
+
 - (NSDictionary *)constantsToExport {
-    return @{@"is24HourFormat": @(self.is24HourFormat)};
+    return @{
+      @"is24HourFormat": @(self.is24HourFormat),
+      @"usesMetricSystem": @(self.usesMetricSystem)
+    };
 }
 
 @end
