@@ -31,11 +31,16 @@ public class LocaleUtilsModule extends ReactContextBaseJavaModule {
 		return DateFormat.is24HourFormat(getReactApplicationContext());
 	}
 
+	private boolean usesMetricSystem() {
+		return false;
+	}
+
 	@Override
   public @Nullable Map<String, Object> getConstants() {
 		HashMap<String, Object> constants = new HashMap<String, Object>();
 
 		constants.put("is24HourFormat", this.is24HourFormat());
+		constants.put("usesMetricSystem", this.usesMetricSystem());
 
     return constants;
 	}
