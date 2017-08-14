@@ -9,6 +9,8 @@ import com.facebook.react.bridge.ReactMethod;
 import java.util.Map;
 import java.util.HashMap;
 
+import android.text.format.DateFormat;
+
 import javax.annotation.Nullable;
 
 public class LocaleUtilsModule extends ReactContextBaseJavaModule {
@@ -20,8 +22,13 @@ public class LocaleUtilsModule extends ReactContextBaseJavaModule {
     this.reactContext = reactContext;
   }
 
+	@Override
+	public String getName() {
+		return "LocaleUtils";
+	}
+
 	private boolean is24HourFormat() {
-		return false;
+		return DateFormat.is24HourFormat(getReactApplicationContext());
 	}
 
 	@Override
