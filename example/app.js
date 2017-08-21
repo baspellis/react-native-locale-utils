@@ -11,6 +11,7 @@ export default class LocaleUtilsExample extends Component {
   render() {
     const is24HourFormat = LocaleUtils.is24HourFormat();
     const usesMetricSystem = LocaleUtils.usesMetricSystem();
+    const deviceCountry = LocaleUtils.deviceCountry();
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
@@ -18,6 +19,9 @@ export default class LocaleUtilsExample extends Component {
         </Text>
         <Text style={styles.text}>
           Your system uses {usesMetricSystem ? 'Metric' : 'Imperial'} system
+        </Text>
+        <Text style={styles.text}>
+          Your device country code is {deviceCountry}
         </Text>
       </View>
     );

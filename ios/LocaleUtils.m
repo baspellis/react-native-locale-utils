@@ -31,10 +31,16 @@ RCT_EXPORT_MODULE()
     return [[locale objectForKey:NSLocaleUsesMetricSystem] boolValue];
 }
 
+- (NSString *)deviceCountry {
+    NSLocale *locale = [NSLocale currentLocale];
+    return [locale objectForKey: NSLocaleCountryCode];
+}
+
 - (NSDictionary *)constantsToExport {
     return @{
       @"is24HourFormat": @(self.is24HourFormat),
-      @"usesMetricSystem": @(self.usesMetricSystem)
+      @"usesMetricSystem": @(self.usesMetricSystem),
+      @"deviceCountry": self.deviceCountry
     };
 }
 

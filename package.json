@@ -1,6 +1,6 @@
 {
   "name": "react-native-locale-utils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Locale utilities for React Native",
   "main": "index.js",
   "keywords": [
@@ -11,7 +11,8 @@
     "imperial",
   	"locale",
   	"localization",
-  	"device"
+  	"device",
+    "country"
   ],
   "scripts": {},
   "author": "Bas Pellis <bas@webcomrades.com>",

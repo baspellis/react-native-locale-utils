@@ -9,4 +9,7 @@ module.exports = {
   usesMetricSystem: function () {
     return LocaleUtils.usesMetricSystem;
   },
+  deviceCountry: function () {
+    return LocaleUtils.deviceCountry;
+  }
 }

@@ -34,5 +34,6 @@ import LocaleUtils from 'react-native-locale-utils';
 
 | Name                       | Method                           | Return                           | Notes                                                                            |
 | :------------------------- | :------------------------------- | :------------------------------- | :------------------------------------------------------------------------------- |
-| 24 Hour format             | `is24HourFormat()`               | Boolean                          | Defines if system time settings uses 12 hour or 24 hour system                   |
-| Metric System              | `usesMetricSystem()`             | Boolean                          | Defines if system locale uses metric system or not                               |
+| 24 Hour format             | `is24HourFormat()`               | Boolean                          | Returns if system time settings uses 12 hour or 24 hour system                   |
+| Metric System              | `usesMetricSystem()`             | Boolean                          | Returns if system locale uses metric system or not                               |
+| Device Country Code        | `deviceCountry()`                | String                           | Returns the two letter country code for the system                               |

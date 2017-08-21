@@ -33,7 +33,7 @@ public class LocaleUtilsModule extends ReactContextBaseJavaModule {
 	}
 
 	private boolean usesMetricSystem() {
-		String countryCode = Locale.getDefault().getCountry().toUpperCase();
+		String countryCode = this.deviceCountry().toUpperCase();
     switch (countryCode) {
         case "US":
         case "LR":
@@ -44,12 +44,17 @@ public class LocaleUtilsModule extends ReactContextBaseJavaModule {
     }
 	}
 
+	private String deviceCountry() {
+		return Locale.getDefault().getCountry();
+	}
+
 	@Override
   public @Nullable Map<String, Object> getConstants() {
 		HashMap<String, Object> constants = new HashMap<String, Object>();
 
 		constants.put("is24HourFormat", this.is24HourFormat());
 		constants.put("usesMetricSystem", this.usesMetricSystem());
+		constants.put("deviceCountry", this.deviceCountry());
 
     return constants;
 	}
