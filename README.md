@@ -7,15 +7,24 @@ Locale utilities for React Native
 ## Install
 
 ```shell
-npm install --save react-native-device-info
+npm install --save react-native-locale-utils
 ```
 
-## Automatically link
+### Automatically link
+
+add the following line to your Podfile:
+
+```sh
+pod 'LocaleUtils', :path => '../node_modules/react-native-locale-utils'
+```
+
+
+### Manually link
 
 #### With React Native 0.27+
 
 ```shell
-react-native link react-native-device-info
+react-native link react-native-locale-utils
 ```
 
 #### With older versions of React Native
@@ -23,7 +32,7 @@ react-native link react-native-device-info
 You need [`rnpm`](https://github.com/rnpm/rnpm) (`npm install -g rnpm`)
 
 ```shell
-rnpm link react-native-device-info
+rnpm link react-native-locale-utils
 ```
 
 ## Usage
